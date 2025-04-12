@@ -1,51 +1,125 @@
-# ABC-Call-Volume-Trend-Analysis
+# ABC Call Volume Trend Analysis
 
-In this project, you'll be diving into the world of Customer Experience (CX) analytics, specifically focusing on the inbound calling team of a company. You'll be provided with a dataset that spans 23 days and includes various details such as the agent's name and ID, the queue time (how long a customer had to wait before connecting with an agent), the time of the call, the duration of the call, and the call status (whether it was abandoned, answered, or transferred).
+##  Project Overview
+This project explores **Customer Experience (CX) analytics** by analyzing inbound call center data from Insurance Company. The goal is to identify call volume trends, optimize agent allocation, and improve the overall customer experience.
 
-A Customer Experience (CX) team plays a crucial role in a company. They analyze customer feedback and data, derive insights from it, and share these insights with the rest of the organization. This team is responsible for a wide range of tasks, including managing customer experience programs, handling internal communications, mapping customer journeys, and managing customer data, among others.  
-In the current era, several AI-powered tools are being used to enhance customer experience. These include Interactive Voice Response (IVR), Robotic Process Automation (RPA), Predictive Analytics, and Intelligent Routing.
+The dataset provided spans **23 days** and includes:
+- Agent details (name and ID)
+- Queue time
+- Call time and duration
+- Call status (Answered, Abandoned, Transferred)
 
-One of the key roles in a CX team is that of the customer service representative, also known as a call center agent. These agents handle various types of support, including email, inbound, outbound, and social media support.
+The analysis will help address key pain points such as high call abandonment rate and insufficient night-time support.
 
-Inbound customer support, which is the focus of this project, involves handling incoming calls from existing or prospective customers. The goal is to attract, engage, and delight customers, turning them into loyal advocates for the business.
+---
 
-## Business Understanding:  
-Advertising is a crucial aspect of any business. It helps increase sales and makes the audience aware of the company's products or services. The first impressions of a business are often formed through its advertising efforts.
+##  Business Understanding
+Customer satisfaction is a core business priority, and call centers play a vital role in shaping that experience. A 30% abandon rate reflects poorly on the brand and highlights inefficiencies in agent staffing.
 
-The target audience for businesses can be local, regional, national, or international. Various types of advertising are used to reach these audiences, including online directories, trade and technical press, radio, cinema, outdoor advertising, and national papers, magazines, and TV.
+Our objective is to:
+- Identify peak call times
+- Propose efficient manpower allocation plans
+- Ensure 90% of calls are answered both during the day and night shifts
 
-The advertising business is highly competitive, with many players bidding large amounts of money to target the same audience segment. This is where the company's analytical skills come into play. The goal is to identify those media platforms that can convert audiences into customers at a low cost.
+---
 
-In this project, you'll be using your analytical skills to understand the trends in the call volume of the CX team and derive valuable insights from it.
+##  Dataset Description
+- **Source:** Internal dataset from ABC Insurance Company
+- **Duration:** 23 days
+- **Scope:** Inbound calls
 
-## Further Study on CX Analytics:   
-[Click Here](https://summer-stag-92c.notion.site/Notes-on-CX-Analytics-0265247e4f854ba796fbec94d165eaa4?pvs=4
-)
+### Key Columns:
+| Column Name     | Description                              |
+|----------------|------------------------------------------|
+| Agent Name     | Name of the call center agent             |
+| Agent ID       | Unique identifier for the agent           |
+| Queue Time     | Time the customer waited before connection|
+| Call Time      | Timestamp of the call                     |
+| Call Duration  | Length of the call                        |
+| Call Status    | Answered, Abandoned, or Transferred       |
 
-## Data Analytics Tasks:
+---
 
-You have been provided with a dataset that contains information about the inbound calls received by a company named ABC, which operates in the insurance sector. Your task is to use this data to answer the following questions:
+##  Data Analytics Tasks
 
-## 1. Average Call Duration:    
-Determine the average duration of all incoming calls received by agents. This should be calculated for each time bucket.  
-Your Task: What is the average duration of calls for each time bucket?
+### 1️. Average Call Duration by Time Bucket
+- **Goal:** Calculate the average duration of calls in each hourly time bucket (e.g., 9-10 AM).
+- **Output:** Table or chart summarizing average durations.
 
-## 2. Call Volume Analysis:   
-Visualize the total number of calls received. This should be represented as a graph or chart showing the number of calls against time. Time should be represented in buckets (e.g., 1-2, 2-3, etc.).  
-Your Task: Can you create a chart or graph that shows the number of calls received in each time bucket?
+### 2️. Call Volume Analysis
+- **Goal:** Visualize the total number of calls per time bucket.
+- **Output:** Bar or line graph showing call volume trends from 9 AM to 9 PM.
 
-## 3. Manpower Planning:   
-The current rate of abandoned calls is approximately 30%. Propose a plan for manpower allocation during each time bucket (from 9 am to 9 pm) to reduce the abandon rate to 10%. In other words, you need to calculate the minimum number of agents required in each time bucket to ensure that at least 90 out of 100 calls are answered.  
-Your Task: What is the minimum number of agents required in each time bucket to reduce the abandon rate to 10%?
+### 3️. Manpower Planning (Day Shift)
+- **Goal:** Reduce call abandonment from 30% to 10%.
+- **Method:**
+  - Calculate total number of calls per time bucket.
+  - Estimate required agents to answer 90% of those calls.
+  - Apply efficiency assumptions (agent availability and utilization).
 
-## 4. Night Shift Manpower Planning:  
-Customers also call ABC Insurance Company at night but don't get an answer because there are no agents available. This creates a poor customer experience. Assume that for every 100 calls that customers make between 9 am and 9 pm, they also make 30 calls at night between 9 pm and 9 am.  
-Your Task: Propose a manpower plan for each time bucket throughout the day, keeping the maximum abandon rate at 10%.
+### 4️. Night Shift Manpower Planning
+- **Goal:** Plan staffing from 9 PM to 9 AM based on projected 30% of daytime volume.
+- **Output:** Full 24-hour manpower plan ensuring <10% abandon rate.
 
-## Assumptions:   
-An agent works for 6 days a week; On average, each agent takes 4 unplanned leaves per month; An agent's total working hours are 9 hours, out of which 1.5 hours are spent on lunch and snacks in the office. On average, an agent spends 60% of their total actual working hours (i.e., 60% of 7.5 hours) on calls with customers/users. The total number of days in a month is 30.
+---
+
+##  Assumptions
+- Each agent works **6 days/week**
+- Agents take **4 unplanned leaves/month**
+- Work duration: **9 hours/day** (with 1.5 hours break)
+- Productive call time: **60% of 7.5 hours = 4.5 hours/day**
+- **30 days in a month**
+
+These assumptions will inform agent availability and staffing requirements.
+
+---
+
+##  Tools Used
+- **Excel:** Data cleaning, PivotTables, formula-based calculations
+- **Charts & Graphs:** Line charts, bar graphs, scatter plots, combo charts
+- **Formulas Used:**
+  - `AVERAGEIF()`
+  - `COUNTIF()`
+  - `SUMIF()`
+  - `VLOOKUP()` / `XLOOKUP()`
+
+---
+
+##  Deliverables
+- Excel workbook with:
+  - Cleaned and formatted dataset
+  - All analysis with relevant visualizations
+  - Agent staffing calculator (day + night shifts)
+- Visual dashboard for:
+  - Call volume
+  - Call duration
+  - Staffing needs per time bucket
+
+---
+
+##  Key Insights & Recommendations
+- **Peak Hours:** Identify time slots with highest abandon rate
+- **Staffing Strategy:** Suggest optimal number of agents to maintain SLA
+- **Night Shift Coverage:** Plan realistic staffing based on extended service window
+
+---
+
+##  Repository Structure
+```
+ABC-Call-Volume-Trend-Analysis/
+├──  Dataset/
+│   └── ABC_Call_Data.csv
+├──  Excel_Analysis/
+│   └── ABC_Call_Volume_Dashboard.xlsx
+├──  Visualizations/
+│   ├── Call_Volume_Trend.png
+│   ├── Avg_Call_Duration_By_Hour.png
+│   └── Manpower_Planning_Summary.png
+├──  README.md
+└──  Insights_Summary.pdf
+```
+
+---
 
 
-## Dataset
-To access the 'ABC call volume trend analysis' dataset [Click Here](https://docs.google.com/spreadsheets/d/1JkO5orb_i4VN5ZPTGDwstfCDiqmAu17K/edit?usp=sharing&ouid=109009397325426290832&rtpof=true&sd=true)
 
