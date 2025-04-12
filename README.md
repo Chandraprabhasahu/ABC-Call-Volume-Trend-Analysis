@@ -24,7 +24,7 @@ Our objective is to:
 ---
 
 ##  Dataset Description
-- **Source:** Internal dataset from ABC Insurance Company
+
 - **Duration:** 23 days
 - **Scope:** Inbound calls
 
@@ -69,6 +69,10 @@ Our objective is to:
 - Work duration: **9 hours/day** (with 1.5 hours break)
 - Productive call time: **60% of 7.5 hours = 4.5 hours/day**
 - **30 days in a month**
+
+
+![Assumptions](./project_task.png)
+
 
 These assumptions will inform agent availability and staffing requirements.
 
@@ -121,5 +125,9 @@ ABC-Call-Volume-Trend-Analysis/
 
 ---
 
+## Conclusion
+The ABC Call Volume Trend Analysis project provided valuable insights into customer call patterns and agent performance over a 23-day period. By analyzing call durations, volumes, and time-based trends, we identified high-traffic periods and proposed optimized manpower allocation strategies to significantly reduce the call abandon rate from 30% to below 10%. Additionally, we addressed night shift call management by estimating required staffing based on projected call volumes. These data-driven recommendations can enhance operational efficiency, improve customer satisfaction, and support better workforce planning for ABC Insurance's CX team.
+
+---
 
 
